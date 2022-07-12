@@ -1,0 +1,314 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --text-ff-: 'Roboto', sans-serif;
+  --bgLight-color-: #FFFFFF;
+  --bgDark-color: #121214;
+  --text-color-: hsl(240, 6%, 21%);
+  --textDark-color-: #FFFFFF;
+  --bspLight-fill-: #E1E1E6;
+  --bspDark-fill-: #29292E;
+  --bspInnerLight-fill-: #323238;
+  --bspInnerDark-fill-: #C4C4CC;
+  --bPressedLight-fill-: #02799D;
+  --bPressedDark-fill-: #0A3442;
+  --pressedInnerLight-fill-: #FFFFFF;
+}
+
+body {
+  position: relative;
+  background-color: var(--bgLight-color-);
+}
+
+.dark {
+  background: var(--bgDark-color);
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+
+header {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+}
+
+header button svg {
+  width: clamp(4.8rem, 2rem + 5vw, 6rem);
+  height: clamp(4.8rem, 2rem + 5vw, 6rem);
+}
+
+.countdown {
+  justify-self: center;
+  align-self: end;
+  text-align: center;
+}
+
+.sounds {
+  justify-self: center;
+  position: relative;
+}
+
+.timer span {
+  font-size: clamp(2rem, 8rem + 10vw, 17rem);
+  line-height: 14.8rem; 
+  
+  color: var(--text-color-);
+  font-family: var(--text-ff-);
+}
+
+.timerDark span {
+  color: var(--textDark-color-);
+} 
+
+.controls {
+  margin-top: clamp(0.7rem, 0.5rem + 2vw, 2rem);
+  height: 8.1rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.controlsDark button svg path {
+  fill: #C4C4CC;
+}
+
+.controls button svg {
+  width: clamp(4.8rem, 2rem + 5vw, 6rem);
+  height: clamp(4.8rem, 2rem + 5vw, 6rem);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  
+  cursor: pointer;
+}
+
+.sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  height: 33.6rem;
+  margin-top: clamp(5rem, 3rem + 10vw, 10rem);
+}
+
+
+.sounds button svg {
+  width: 15rem;
+  height: 15rem;
+}
+
+.sounds button:nth-child(5) svg {
+  width: 12rem;
+  height: 12rem;
+  background: var(--bspLight-fill-);
+  fill: var(--bspInnerLight-fill-);
+}
+
+.sounds button svg path:nth-child(1) {
+  fill: var(--bspLight-fill-);
+}
+
+.soundsDark button svg path:nth-child(1) {
+  fill: var(--bspDark-fill-);
+}
+
+.sounds svg rect,
+.sounds svg circle,
+.sounds svg path{
+  fill: var(--bspInnerLight-fill-)
+}
+
+.soundsDark svg path{
+  fill: var(--bspInnerDark-fill-)
+}
+
+.soundsDark svg rect,
+.soundsDark svg circle {
+  fill:var(--pressedInnerLight-fill-)
+}
+
+.sounds .pressed svg path:nth-child(1) {
+  fill: var(--bPressedLight-fill-);
+}
+
+.soundsDark .pressed svg path:nth-child(1) {
+  fill: var(--bPressedDark-fill-);
+}
+
+.sounds .pressed svg rect,
+.sounds .pressed svg circle,
+.sounds .pressed svg path {
+  fill: var(--pressedInnerLight-fill-); 
+}
+
+.sliderF {
+  -webkit-appearance: none;
+  background: var(--bspInnerLight-fill-);
+  position: absolute;
+  /* top: 11rem;
+  left: 1.6rem; */
+  top: 11rem;
+  left: 2.1rem;
+  width: 10.9rem;
+  height:0.4rem;
+  border-radius: 5px;
+}
+
+.sliderF::-webkit-slider-thumb {
+  -webkit-appearance: none ;
+  background: var(--bspInnerLight-fill-);
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.sliderR {
+  -webkit-appearance: none;
+  background: var(--bspInnerLight-fill-);
+  position: absolute;
+  top: 11rem;
+  right: 2rem;
+  width: 10.9rem;
+  height:0.4rem;
+  border-radius: 5px;
+}
+
+.sliderR::-webkit-slider-thumb {
+  -webkit-appearance: none ;
+  background: var(--bspInnerLight-fill-);
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.sliderC {
+  -webkit-appearance: none;
+  background: var(--bspInnerLight-fill-);
+  position: absolute;
+  /* top: 30.8rem; */
+  bottom: 3.7rem;
+  left: 2.1rem;
+  width: 10.9rem;
+  height:0.4rem;
+  border-radius: 5px;
+}
+
+.sliderC::-webkit-slider-thumb {
+  -webkit-appearance: none ;
+  background: var(--bspInnerLight-fill-);
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.sliderF2 {
+  -webkit-appearance: none;
+  background: var(--bspInnerLight-fill-);
+  position: absolute;
+  /* top: 30.8rem; */
+  bottom: 3.7rem;
+  right: 2rem;
+  width: 10.9rem;
+  height:0.4rem;
+  border-radius: 5px;
+}
+
+.sliderF2::-webkit-slider-thumb {
+  -webkit-appearance: none ;
+  background: var(--bspInnerLight-fill-);
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.sliderPressed,
+.sliderPressed::-webkit-slider-thumb {
+  background: var(--pressedInnerLight-fill-);
+}
+
+.sliderDark {
+  background: var(--pressedInnerLight-fill-);
+}
+
+.sliderDark::-webkit-slider-thumb {
+  background: var(--pressedInnerLight-fill-);
+}
+
+button:hover {
+  opacity: 1.5;
+  transform: scale(1.03);
+}
+
+.hide {
+  display: none;
+}
+
+
+@media (min-width: 880px) {
+  header {
+    position: fixed;
+    right: 4.5rem;
+    top: 4.5rem;
+  }
+  
+  main {
+    max-width: 1280px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  
+  .countdown, 
+  .sounds {
+    align-self: center;
+  }
+  
+  .sounds {
+    height: 40rem;
+    margin-top: 0;
+  }
+  
+  .sounds button svg {
+    width: 18rem;
+    height: 18rem;
+  }
+
+   .sliderF {
+    top: 14.0rem;
+    left: 2.6rem;
+    width: 13rem;
+  }
+
+  .sliderR {
+    top: 14rem;
+    right: 2.4rem;
+    width: 13rem;
+  }
+
+  .sliderC {
+    bottom: 4rem;
+    left: 2.6rem;
+    width: 13rem;
+  }
+
+  .sliderF2 {
+    bottom: 4rem;
+    right: 2.4rem;
+    width: 13rem;
+  }
+}
