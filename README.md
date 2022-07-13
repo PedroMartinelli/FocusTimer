@@ -1,3 +1,3 @@
 # FocusTimer
 
-Projeto que fiz para aplicar conhecimentos de JavaScript e reforçar HTML e CSS.
+Projeto que fiz aplicando conhecimentos aprendidos de JavaScript . 
